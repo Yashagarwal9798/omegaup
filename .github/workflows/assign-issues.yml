@@ -280,9 +280,9 @@ jobs:
                       
                       let remainingMessage = '';
                       if (remaining === '0') {
-                          remainingMessage = `\n\n⚠️ You have reached your maximum of ${maxAssignments} assigned issues. Please complete or unassign an issue before taking another.`;
+                          remainingMessage = `\n\nYou have reached your maximum of ${maxAssignments} assigned issues. Please complete or unassign an issue before taking another.`;
                       } else {
-                          remainingMessage = `\n\n📊 You have **${remaining}** self-assign${remaining === '1' ? '' : 's'} remaining out of ${maxAssignments}.`;
+                          remainingMessage = `\n\nYou have **${remaining}** self-assign${remaining === '1' ? '' : 's'} remaining out of ${maxAssignments}.`;
                       }
                       
                       await github.rest.issues.createComment({
